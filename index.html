@@ -1,638 +1,403 @@
-<!DOCTYPE html><html lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jordan | Disney Travel Planner</title>
-  <meta name="description" content="Jordan helps families, couples, and Disney fans plan Disney vacations anywhere in the world—from theme parks and cruises to international Disney destinations." />
-  <style>
-    :root {
-      --bg: #08111f;
-      --bg-soft: #0f1b2d;
-      --panel: rgba(255,255,255,0.08);
-      --panel-strong: rgba(255,255,255,0.12);
-      --text: #f6f8fc;
-      --muted: #c6d2e5;
-      --gold: #ffd166;
-      --pink: #ff7eb6;
-      --blue: #78cfff;
-      --line: rgba(255,255,255,0.14);
-      --shadow: 0 20px 60px rgba(0,0,0,0.35);
-      --radius: 24px;
-      --max: 1180px;
-    }* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(255,126,182,0.18), transparent 30%),
-    radial-gradient(circle at top right, rgba(120,207,255,0.16), transparent 35%),
-    linear-gradient(180deg, #09111e 0%, #07101c 48%, #061019 100%);
-  color: var(--text);
-  line-height: 1.6;
-}
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#15213f" />
+  <meta name="color-scheme" content="light" />
 
-a { color: inherit; text-decoration: none; }
-img { max-width: 100%; display: block; }
+  <title>Jordan | Worldwide Disney Vacation Planning</title>
+  <meta name="description" content="Jordan helps families, couples, and Disney fans plan smoother Disney vacations around the world—from parks and cruises to international adventures." />
+  <meta name="robots" content="index,follow" />
 
-.container {
-  width: min(calc(100% - 2rem), var(--max));
-  margin: 0 auto;
-}
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jordan | Worldwide Disney Vacation Planning" />
+  <meta property="og:description" content="From runway to resort, Jordan helps make Disney travel feel easier, smarter, and more personal." />
 
-.nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(16px);
-  background: rgba(8, 17, 31, 0.72);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
 
-.nav-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1rem 0;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-}
-
-.brand-mark {
-  width: 42px;
-  height: 42px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--gold), var(--pink));
-  color: #08111f;
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-  box-shadow: var(--shadow);
-}
-
-.nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  flex-wrap: wrap;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 0.95rem 1.35rem;
-  border-radius: 999px;
-  font-weight: 700;
-  border: 1px solid transparent;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-  cursor: pointer;
-}
-
-.btn:hover { transform: translateY(-1px); }
-.btn-primary {
-  background: linear-gradient(135deg, var(--gold), #ffb347);
-  color: #08111f;
-  box-shadow: 0 12px 30px rgba(255, 209, 102, 0.28);
-}
-.btn-secondary {
-  background: rgba(255,255,255,0.05);
-  border-color: rgba(255,255,255,0.12);
-  color: var(--text);
-}
-
-.hero {
-  padding: 4.5rem 0 3rem;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.9fr;
-  gap: 2rem;
-  align-items: center;
-}
-
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  padding: 0.45rem 0.85rem;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.07);
-  color: var(--blue);
-  border: 1px solid rgba(255,255,255,0.1);
-  font-size: 0.88rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-h1 {
-  font-size: clamp(2.5rem, 5vw, 4.8rem);
-  line-height: 1.02;
-  margin: 1rem 0;
-  letter-spacing: -0.04em;
-}
-
-.hero p {
-  font-size: 1.08rem;
-  color: var(--muted);
-  max-width: 64ch;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.85rem;
-  margin-top: 1.5rem;
-}
-
-.hero-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.06));
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 28px;
-  padding: 1.25rem;
-  box-shadow: var(--shadow);
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-card::before {
-  content: "";
-  position: absolute;
-  inset: -40% auto auto -10%;
-  width: 220px;
-  height: 220px;
-  background: radial-gradient(circle, rgba(255,209,102,0.28), transparent 70%);
-  pointer-events: none;
-}
-
-.passport {
-  display: grid;
-  gap: 1rem;
-  position: relative;
-  z-index: 1;
-}
-
-.passport-badge {
-  display: inline-block;
-  padding: 0.4rem 0.75rem;
-  border-radius: 999px;
-  background: rgba(8,17,31,0.5);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: var(--gold);
-  font-size: 0.82rem;
-  font-weight: 800;
-  width: fit-content;
-}
-
-.passport h3 {
-  margin: 0;
-  font-size: 1.7rem;
-}
-
-.passport-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.85rem;
-}
-
-.mini-card {
-  background: rgba(8,17,31,0.35);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 18px;
-  padding: 0.95rem;
-}
-
-.mini-card strong {
-  display: block;
-  font-size: 0.95rem;
-  margin-bottom: 0.2rem;
-}
-
-section {
-  padding: 2rem 0;
-}
-
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 1rem;
-  margin-bottom: 1.25rem;
-}
-
-.section-head h2 {
-  margin: 0;
-  font-size: clamp(1.7rem, 3vw, 2.5rem);
-  letter-spacing: -0.03em;
-}
-
-.section-head p {
-  margin: 0;
-  color: var(--muted);
-  max-width: 56ch;
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.card {
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 1.35rem;
-  box-shadow: var(--shadow);
-}
-
-.card h3, .card h4 {
-  margin-top: 0;
-  margin-bottom: 0.6rem;
-}
-
-.muted { color: var(--muted); }
-
-.destinations {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0.9rem;
-}
-
-.destination {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.09);
-  border-radius: 20px;
-  padding: 1rem;
-  min-height: 150px;
-}
-
-.destination span {
-  display: inline-block;
-  margin-bottom: 0.6rem;
-  font-size: 0.8rem;
-  font-weight: 800;
-  color: var(--gold);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.two-up {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
-}
-
-ul.checks {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0;
-  display: grid;
-  gap: 0.75rem;
-}
-
-ul.checks li {
-  padding-left: 1.5rem;
-  position: relative;
-  color: var(--muted);
-}
-
-ul.checks li::before {
-  content: "✦";
-  position: absolute;
-  left: 0;
-  color: var(--pink);
-}
-
-.founder {
-  background: linear-gradient(135deg, rgba(255,126,182,0.12), rgba(120,207,255,0.08));
-}
-
-.testimonial {
-  position: relative;
-  padding-top: 2rem;
-}
-
-.testimonial::before {
-  content: "“";
-  position: absolute;
-  top: -0.2rem;
-  left: 0;
-  font-size: 4rem;
-  line-height: 1;
-  color: rgba(255,209,102,0.5);
-}
-
-.cta {
-  padding: 2.5rem;
-  border-radius: 30px;
-  background: linear-gradient(135deg, rgba(255,209,102,0.16), rgba(255,126,182,0.14), rgba(120,207,255,0.14));
-  border: 1px solid rgba(255,255,255,0.14);
-  box-shadow: var(--shadow);
-  text-align: center;
-}
-
-.cta h2 { margin-top: 0; }
-.cta p { color: var(--muted); max-width: 60ch; margin: 0 auto 1.25rem; }
-
-.footer {
-  padding: 2rem 0 3rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  flex-wrap: wrap;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  padding-top: 1.25rem;
-}
-
-@media (max-width: 1024px) {
-  .hero-grid,
-  .two-up,
-  .grid-3,
-  .destinations {
-    grid-template-columns: 1fr 1fr;
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Jordan | Worldwide Disney Vacation Planning",
+    "description": "Independent travel planning focused on Disney destinations around the world.",
+    "areaServed": "Worldwide"
   }
-}
-
-@media (max-width: 740px) {
-  .nav-inner,
-  .section-head,
-  .footer-inner {
-    align-items: flex-start;
-  }
-
-  .hero-grid,
-  .two-up,
-  .grid-3,
-  .destinations,
-  .passport-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero {
-    padding-top: 3rem;
-  }
-
-  .nav-links {
-    display: none;
-  }
-}
-
-  </style>
+  </script>
 </head>
 <body>
-  <header class="nav">
-    <div class="container nav-inner">
-      <a href="#top" class="brand">
-        <div class="brand-mark">J</div>
-        <div>
-          <div>Jordan</div>
-          <div style="font-size:0.82rem;color:var(--muted);font-weight:600;">Disney Travel Planner</div>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="#top" aria-label="Jordan travel planning home">
+        <span class="brand-mark" aria-hidden="true">J</span>
+        <span class="brand-copy">
+          <strong>Jordan</strong>
+          <span>Worldwide Disney Vacation Planning</span>
+        </span>
       </a>
-      <nav class="nav-links">
-        <a href="#services">Services</a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav-links" id="site-nav" aria-label="Primary navigation">
+        <a href="#services">How I Help</a>
         <a href="#destinations">Destinations</a>
-        <a href="#about">About</a>
-        <a href="#reviews">Why Jordan</a>
-        <a href="#contact" class="btn btn-primary">Start Planning</a>
+        <a href="#about">Meet Jordan</a>
+        <a href="#process">How It Works</a>
+        <a class="button button-primary button-small" href="#plan">Start My Trip</a>
       </nav>
     </div>
-  </header>  <main id="top">
-    <section class="hero">
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
       <div class="container hero-grid">
         <div>
-          <div class="eyebrow">Former Flight Attendant • Global Disney Planning</div>
-          <h1>Your Disney trip, planned beautifully—anywhere in the world.</h1>
-          <p>
-            Jordan helps families, couples, and Disney fans plan smoother, smarter Disney vacations across the globe—from Walt Disney World and Disneyland to Disney Cruise Line, Aulani, Disneyland Paris, Tokyo Disney Resort, and beyond.
+          <div class="eyebrow">Former flight attendant • worldwide trip planning</div>
+          <h1>Disney anywhere.<br /><em>Planned beautifully.</em></h1>
+          <p class="hero-lede">
+            Jordan helps families, couples, and Disney fans turn a big idea into a trip that actually flows—from the first flight to the final park day, cruise sunset, or suitcase home.
           </p>
-          <p>
-            With a flight-attendant eye for travel flow, timing, and comfort, Jordan goes beyond park tickets and hotel picks—helping clients build Disney trips that feel magical from takeoff to checkout.
-          </p>
+
           <div class="hero-actions">
-            <a href="#contact" class="btn btn-primary">Plan My Disney Trip</a>
-            <a href="#about" class="btn btn-secondary">Meet Jordan</a>
+            <a class="button button-primary" href="#plan">Plan my Disney trip <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#destinations">Explore destinations</a>
           </div>
-        </div><aside class="hero-card">
-      <div class="passport">
-        <div class="passport-badge">Worldwide Disney Specialist</div>
-        <h3>Magic, mapped for you.</h3>
-        <div class="passport-grid">
-          <div class="mini-card">
-            <strong>Theme Parks</strong>
-            <div class="muted">Florida, California, Paris, Tokyo, Hong Kong, Shanghai</div>
+
+          <div class="trust-row" aria-label="Jordan travel planning highlights">
+            <span><i class="trust-dot" aria-hidden="true"></i> Parks + cruises</span>
+            <span><i class="trust-dot" aria-hidden="true"></i> U.S. + international</span>
+            <span><i class="trust-dot" aria-hidden="true"></i> Flights + trip flow</span>
+            <span><i class="trust-dot" aria-hidden="true"></i> First-timers welcome</span>
           </div>
-          <div class="mini-card">
-            <strong>Disney Cruise Line</strong>
-            <div class="muted">Sailings, pre/post stays, smooth travel coordination</div>
+        </div>
+
+        <div class="travel-card" aria-label="Worldwide Disney travel concept illustration">
+          <div class="travel-top">
+            <span class="travel-label">Jordan's trip desk</span>
+            <span class="travel-code">JDN / WORLD</span>
           </div>
-          <div class="mini-card">
-            <strong>Aulani & Resort Stays</strong>
-            <div class="muted">Relaxed luxury with the Disney touch</div>
+
+          <span class="pin pin-a">Florida</span>
+          <span class="pin pin-b">Paris</span>
+          <span class="pin pin-c">Hawaiʻi</span>
+          <span class="pin pin-d">Tokyo</span>
+
+          <div class="globe" aria-hidden="true">
+            <div>
+              <strong>GO</strong>
+              <span>find your magic</span>
+            </div>
           </div>
-          <div class="mini-card">
-            <strong>Custom Itineraries</strong>
-            <div class="muted">Flights, hotels, transfers, park flow, and more</div>
+
+          <div class="trip-stamp">
+            <div>
+              <strong>From runway to resort</strong>
+              <span>One travel plan. Fewer moving parts. More room for the good stuff.</span>
+            </div>
+            <div class="stamp-circle" aria-hidden="true">MAGIC<br />MAPPED</div>
           </div>
         </div>
       </div>
-    </aside>
-  </div>
-</section>
+    </section>
 
-<section id="services">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <h2>What Jordan helps with</h2>
+    <section class="value-strip" aria-label="Planning advantages">
+      <div class="container value-grid">
+        <div class="value-item"><strong>Destination fit</strong><span>Pick the Disney experience that fits your people.</span></div>
+        <div class="value-item"><strong>Travel flow</strong><span>Think beyond the park gate: flights, transfers, pacing.</span></div>
+        <div class="value-item"><strong>Less overwhelm</strong><span>Turn hundreds of choices into a clear path forward.</span></div>
+        <div class="value-item"><strong>Whole-trip thinking</strong><span>Build the vacation around the memory, not the checklist.</span></div>
       </div>
-      <p>From simple Disney getaways to complex international itineraries, every trip is designed to reduce stress and maximize fun.</p>
-    </div>
-    <div class="grid-3">
-      <article class="card">
-        <h3>Custom Disney Vacation Planning</h3>
-        <p class="muted">Destination matching, resort guidance, ticket strategy, dining recommendations, and day-by-day flow.</p>
-      </article>
-      <article class="card">
-        <h3>Flights & Travel Coordination</h3>
-        <p class="muted">A founder background in aviation means smarter routing, fewer headaches, and smoother transitions along the way.</p>
-      </article>
-      <article class="card">
-        <h3>Disney Cruise & Land Combos</h3>
-        <p class="muted">Pair cruises, parks, resort stays, and city add-ons into one seamless Disney travel experience.</p>
-      </article>
-      <article class="card">
-        <h3>First-Time Disney Support</h3>
-        <p class="muted">Perfect for guests who want expert help decoding options, timelines, and what is actually worth doing.</p>
-      </article>
-      <article class="card">
-        <h3>Special Occasion Trips</h3>
-        <p class="muted">Honeymoons, anniversaries, birthdays, surprise trips, and memory-making vacations with elevated details.</p>
-      </article>
-      <article class="card">
-        <h3>International Disney Planning</h3>
-        <p class="muted">Confident guidance for Disney destinations outside the U.S., including logistics, pacing, and travel considerations.</p>
-      </article>
-    </div>
-  </div>
-</section>
+    </section>
 
-<section id="destinations">
-  <div class="container">
-    <div class="section-head">
-      <div>
-        <h2>Disney destinations around the world</h2>
-      </div>
-      <p>Jordan is building a brand around helping clients plan Disney anywhere—not just one resort, not just one country.</p>
-    </div>
-    <div class="destinations">
-      <div class="destination">
-        <span>Florida</span>
-        <h4>Walt Disney World</h4>
-        <p class="muted">Resorts, parks, dining, transport flow, and family-friendly trip design.</p>
-      </div>
-      <div class="destination">
-        <span>California</span>
-        <h4>Disneyland Resort</h4>
-        <p class="muted">Shorter escapes, first-timers, and paired Southern California vacations.</p>
-      </div>
-      <div class="destination">
-        <span>At Sea</span>
-        <h4>Disney Cruise Line</h4>
-        <p class="muted">Embarkation strategy, add-on stays, and cruise-plus-park planning.</p>
-      </div>
-      <div class="destination">
-        <span>Hawaii</span>
-        <h4>Aulani</h4>
-        <p class="muted">Relaxed Disney magic with a resort-first, experience-rich vacation style.</p>
-      </div>
-      <div class="destination">
-        <span>Europe</span>
-        <h4>Disneyland Paris</h4>
-        <p class="muted">Disney woven into broader European adventures with easy planning support.</p>
-      </div>
-      <div class="destination">
-        <span>Japan</span>
-        <h4>Tokyo Disney Resort</h4>
-        <p class="muted">A dream trip for Disney lovers ready for something iconic and unforgettable.</p>
-      </div>
-      <div class="destination">
-        <span>Hong Kong</span>
-        <h4>Hong Kong Disneyland</h4>
-        <p class="muted">A compact Disney experience that works beautifully in a larger Asia itinerary.</p>
-      </div>
-      <div class="destination">
-        <span>China</span>
-        <h4>Shanghai Disney Resort</h4>
-        <p class="muted">For travelers who want a bold, globally unique Disney destination experience.</p>
-      </div>
-      <div class="destination">
-        <span>Worldwide</span>
-        <h4>Disney + Multi-City Trips</h4>
-        <p class="muted">Cruise, city, beach, and Disney combinations designed as one complete journey.</p>
-      </div>
-      <div class="destination">
-        <span>Luxury</span>
-        <h4>VIP-Feel Planning</h4>
-        <p class="muted">Premium pacing, smart logistics, and elevated touches without the overwhelm.</p>
-      </div>
-    </div>
-  </div>
-</section>
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">How Jordan helps</p>
+          <h2 class="section-title">A Disney planner who thinks like a traveler.</h2>
+          <p class="section-copy">
+            The park reservation is only one part of a great vacation. Jordan looks at the whole journey—who is going, how you like to travel, what matters most, and where unnecessary friction can be removed.
+          </p>
+        </div>
 
-<section id="about" class="founder">
-  <div class="container two-up">
-    <div class="card" style="background:rgba(8,17,31,0.34);">
-      <h2>Meet Jordan</h2>
-      <p class="muted">
-        Jordan’s founder story is what makes this brand memorable: a former flight attendant with a passion for Disney, travel, and helping people feel taken care of every step of the way.
-      </p>
-      <p class="muted">
-        That means clients get more than a travel booking—they get someone who understands how the travel side shapes the whole vacation. Airport timing, route choices, transitions, comfort, family movement, and the rhythm of the trip all matter.
-      </p>
-      <p class="muted">
-        Jordan’s mission is simple: become the go-to Disney travel expert for anyone planning anything Disney, anywhere in the world.
-      </p>
-    </div>
-    <div class="card" style="background:rgba(8,17,31,0.34);">
-      <h3>Why clients will trust her</h3>
-      <ul class="checks">
-        <li>Former flight attendant perspective on travel stress, comfort, and trip flow</li>
-        <li>Disney-focused planning built around real people, not one-size-fits-all itineraries</li>
-        <li>Support for families, couples, adults-only trips, and multigenerational groups</li>
-        <li>Confidence with both domestic and international Disney destinations</li>
-        <li>A warm, concierge-style experience that makes planning feel easier</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="reviews">
-  <div class="container two-up">
-    <div class="card testimonial">
-      <h3>What makes Jordan different</h3>
-      <p class="muted">
-        Most people searching for Disney help are overwhelmed, busy, or worried about making expensive mistakes. Jordan’s brand should feel like relief: organized, informed, caring, and globally capable.
-      </p>
-      <p class="muted">
-        She is not just selling a vacation. She is creating a smoother path to one of the most meaningful trips people take.
-      </p>
-    </div>
-    <div class="card">
-      <h3>Best-fit clients</h3>
-      <ul class="checks">
-        <li>First-time Disney travelers who want expert guidance</li>
-        <li>Parents planning memorable family trips without chaos</li>
-        <li>Couples looking for romantic or elevated Disney travel</li>
-        <li>Adults who love Disney and want a more refined experience</li>
-        <li>Travelers interested in Disney destinations outside the U.S.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="contact">
-  <div class="container">
-    <div class="cta">
-      <h2>Ready to plan your Disney adventure?</h2>
-      <p>
-        Whether you’re dreaming about Disney World, Disneyland Paris, a Disney cruise, Aulani, Tokyo Disney, or a custom Disney trip across multiple destinations, Jordan is here to help make it simple.
-      </p>
-      <div class="hero-actions" style="justify-content:center;">
-        <a class="btn btn-primary" href="mailto:hello@jordandisneytravel.com">Book a Planning Call</a>
-        <a class="btn btn-secondary" href="mailto:hello@jordandisneytravel.com">Email Jordan</a>
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">01</div>
+            <h3>Vacation matchmaking</h3>
+            <p>Compare parks, resorts, cruises, seasons, and trip styles so you start with the right Disney destination.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">02</div>
+            <h3>Resort + stay strategy</h3>
+            <p>Make accommodations fit the way your group will actually use the trip—not just the prettiest room photo.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">03</div>
+            <h3>Park-day flow</h3>
+            <p>Build days around energy, priorities, breaks, dining, and must-dos instead of trying to conquer everything.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">04</div>
+            <h3>Flights + transitions</h3>
+            <p>A former flight attendant's perspective helps catch routing, timing, luggage, airport, and transfer friction early.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">05</div>
+            <h3>Cruise + land combinations</h3>
+            <p>Connect a Disney cruise with a park stay, beach break, city visit, or pre/post-cruise hotel without making the trip feel stitched together.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">06</div>
+            <h3>International confidence</h3>
+            <p>Plan Disney abroad as part of the larger journey, with smarter pacing and space for the destination beyond the resort.</p>
+          </article>
+        </div>
       </div>
-      <p style="margin-top:1rem;font-size:0.95rem;">Replace the email above with Jordan’s real business email, booking form, or consultation link.</p>
-    </div>
-  </div>
-</section>
+    </section>
 
-  </main>  <footer class="footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Jordan</strong> • Disney Travel Planner
+    <section class="section destinations-wrap" id="destinations">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Around the world</p>
+          <h2 class="section-title">One Jordan. A whole world of Disney.</h2>
+          <p class="section-copy">Start with the place you already love—or ask Jordan to help figure out which Disney destination fits this particular trip.</p>
+        </div>
+
+        <div class="destination-grid">
+          <article class="destination-card">
+            <div><span class="region">Florida</span><h3>Walt Disney World</h3><p>Big resort vacations, first trips, family traditions, celebrations, and plenty of room to customize.</p></div><span class="arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="destination-card">
+            <div><span class="region">California</span><h3>Disneyland Resort</h3><p>Classic Disney energy in a compact footprint that pairs naturally with a broader Southern California trip.</p></div><span class="arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="destination-card">
+            <div><span class="region">At sea</span><h3>Disney Cruise Line</h3><p>Ships, itineraries, embarkation strategy, and the pre/post-cruise pieces that make sailing days easier.</p></div><span class="arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="destination-card">
+            <div><span class="region">Hawaiʻi</span><h3>Aulani</h3><p>A slower kind of Disney vacation built around resort time, island experiences, and breathing room.</p></div><span class="arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="destination-card">
+            <div><span class="region">France</span><h3>Disneyland Paris</h3><p>A Disney stop that can become one part of a much bigger Paris or European itinerary.</p></div><span class="arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="destination-card">
+            <div><span class="region">Japan</span><h3>Tokyo Disney Resort</h3><p>A bucket-list destination for Disney fans that deserves to be planned in context with the rest of Japan.</p></div><span class="arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="destination-card">
+            <div><span class="region">Hong Kong</span><h3>Hong Kong Disneyland</h3><p>A highly approachable Disney stop for travelers building a broader Hong Kong or Asia itinerary.</p></div><span class="arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="destination-card">
+            <div><span class="region">Shanghai</span><h3>Shanghai Disney Resort</h3><p>A distinctive Disney experience that works best when the wider logistics are considered from day one.</p></div><span class="arrow" aria-hidden="true">↗</span>
+          </article>
+          <article class="destination-card">
+            <div><span class="region">Worldwide</span><h3>Adventures + custom combinations</h3><p>Disney-centered trips that expand into cruises, cities, beaches, rail journeys, and bigger once-in-a-lifetime adventures.</p></div><span class="arrow" aria-hidden="true">↗</span>
+          </article>
+        </div>
       </div>
-      <div>
-        Worldwide Disney vacations, made easier.
+    </section>
+
+    <section class="section" id="about">
+      <div class="container founder-grid">
+        <div class="founder-portrait" role="img" aria-label="Placeholder for a professional photo of Jordan"></div>
+
+        <div class="founder-copy">
+          <p class="section-kicker">Meet Jordan</p>
+          <h2>Travel experience first. Disney joy always.</h2>
+          <p>
+            Jordan brings a former flight attendant's eye to vacation planning: how people move, where travel days get stressful, which transitions deserve more time, and how small details can change the feel of the entire trip.
+          </p>
+          <p>
+            Her goal is bigger than knowing one park. Jordan is building toward being the person you call for <strong>anything Disney, anywhere in the world</strong>—whether that means a first Walt Disney World vacation, a honeymoon at sea, Tokyo Disney as part of Japan, or a multi-generational trip everyone can actually enjoy.
+          </p>
+
+          <div class="founder-points">
+            <div class="founder-point"><strong>Calm under complexity</strong><span>Travel has moving parts. Jordan likes making them behave.</span></div>
+            <div class="founder-point"><strong>Human pacing</strong><span>A good itinerary leaves room to enjoy where you are.</span></div>
+            <div class="founder-point"><strong>Global mindset</strong><span>Disney doesn't stop at U.S. park gates, and neither does the planning.</span></div>
+            <div class="founder-point"><strong>Personal fit</strong><span>Your best trip may look nothing like someone else's.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Simple by design</p>
+          <h2 class="section-title">From “we should go” to a trip that makes sense.</h2>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card"><h3>Tell Jordan the dream</h3><p>Who's going, what you're imagining, rough timing, budget comfort, and what would make the trip special.</p></article>
+          <article class="process-card"><h3>Find the right shape</h3><p>Destination, length, stay style, travel days, and the big decisions become a coherent direction.</p></article>
+          <article class="process-card"><h3>Build the details</h3><p>Layer in the reservations, priorities, pacing, transportation, dining, and experience choices that matter.</p></article>
+          <article class="process-card"><h3>Go enjoy it</h3><p>You leave with a plan you understand—and enough breathing room to actually be on vacation.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section plan-section" id="plan">
+      <div class="container plan-shell">
+        <aside class="plan-intro">
+          <p class="section-kicker" style="color:#8edbd6">Start here</p>
+          <h2>Give Jordan the first five minutes of your trip.</h2>
+          <p>You do not need to know every answer. This is just enough to turn “Disney someday” into something Jordan can start shaping.</p>
+          <ul>
+            <li>No perfect dates required</li>
+            <li>“I don't know” is a valid answer</li>
+            <li>International ideas welcome</li>
+            <li>Families, couples, friends + solo travelers</li>
+          </ul>
+        </aside>
+
+        <div>
+          <form class="plan-form" id="trip-plan-form">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input id="name" name="name" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="destination">Destination</label>
+                <select id="destination" name="destination">
+                  <option value="">Help me choose</option>
+                  <option>Walt Disney World</option>
+                  <option>Disneyland Resort</option>
+                  <option>Disney Cruise Line</option>
+                  <option>Aulani</option>
+                  <option>Disneyland Paris</option>
+                  <option>Tokyo Disney Resort</option>
+                  <option>Hong Kong Disneyland</option>
+                  <option>Shanghai Disney Resort</option>
+                  <option>Adventures by Disney / custom combination</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="travelWindow">When are you thinking?</label>
+                <input id="travelWindow" name="travelWindow" placeholder="e.g. October 2027 or flexible" />
+              </div>
+              <div class="field">
+                <label for="party">Who's going?</label>
+                <input id="party" name="party" placeholder="e.g. 2 adults + 2 kids, ages 8 and 11" />
+              </div>
+              <div class="field">
+                <label for="tripStyle">Trip style</label>
+                <select id="tripStyle" name="tripStyle">
+                  <option value="">Not sure yet</option>
+                  <option>First-time Disney</option>
+                  <option>Family vacation</option>
+                  <option>Adults-only</option>
+                  <option>Honeymoon / anniversary</option>
+                  <option>Multi-generational</option>
+                  <option>Luxury / elevated</option>
+                  <option>Budget-conscious</option>
+                  <option>International bucket-list</option>
+                </select>
+              </div>
+              <div class="field field-full">
+                <label for="budget">Budget comfort zone</label>
+                <input id="budget" name="budget" placeholder="A range is perfect—or say 'help me understand what this costs'" />
+              </div>
+              <div class="field field-full">
+                <label for="notes">What would make this trip feel like a win?</label>
+                <textarea id="notes" name="notes" placeholder="Tell Jordan the dream, the must-dos, what stresses you out, mobility needs, celebrations, favorite characters, food priorities—anything useful."></textarea>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="button button-primary" type="submit">Build my starter brief</button>
+            </div>
+            <p class="form-note" data-contact-status>This demo builds your trip brief locally in the browser. No information is transmitted yet.</p>
+          </form>
+
+          <div class="plan-result" id="plan-result" aria-live="polite">
+            <h3>Your starter brief is ready.</h3>
+            <pre id="plan-result-text"></pre>
+            <div class="form-actions">
+              <button class="button button-soft button-small" type="button" id="copy-plan">Copy brief</button>
+              <a class="button button-primary button-small" id="email-plan" href="#" hidden>Email Jordan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Good questions</p>
+          <h2 class="section-title">You don't need to speak fluent Disney before you call.</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>Can Jordan help if we do not know which Disney destination to choose?</summary>
+            <p>Yes. Destination matching is part of the value: group, budget, travel tolerance, interests, trip length, and the rest of the vacation can all change which Disney experience makes the most sense.</p>
+          </details>
+          <details>
+            <summary>Is this only for families with children?</summary>
+            <p>No. The site is intentionally designed for families, couples, adults-only trips, friends, solo travelers, celebrations, and multi-generational groups.</p>
+          </details>
+          <details>
+            <summary>Can Jordan help with Disney outside the United States?</summary>
+            <p>That is a core part of the brand direction. The goal is worldwide Disney vacation planning, including Disney destinations that are part of larger international itineraries.</p>
+          </details>
+          <details>
+            <summary>Can the plan include more than Disney?</summary>
+            <p>Yes. A strong international trip may use Disney as one anchor while also making room for the city, country, cruise, beach, rail route, or other experiences around it.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="container">
+        <div class="cta-shell">
+          <h2>Wherever the magic is, Jordan can help you get there.</h2>
+          <p>Start with a destination, a rough idea, or nothing more than “we want to do Disney.” The first job is making the trip make sense.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#plan">Start my trip</a>
+            <a class="button button-secondary" href="#about">Why Jordan?</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="#top">
+            <span class="brand-mark" aria-hidden="true">J</span>
+            <span class="brand-copy"><strong>Jordan</strong><span>Disney anywhere. Planned beautifully.</span></span>
+          </a>
+          <p class="footer-copy">Independent travel planning for Disney vacations around the world, built around smoother journeys and more meaningful time away.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="#services">How I Help</a>
+          <a href="#destinations">Destinations</a>
+          <a href="#about">Meet Jordan</a>
+          <a href="#plan">Start Planning</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </div>
+
+      <div class="legal">
+        <span>© <span data-year></span> Jordan. All rights reserved.</span><br />
+        This is an independent travel-planning website and is not presented as an official Disney website. Disney names, destinations, and trademarks belong to their respective owners. Any required host-agency, seller-of-travel, or authorized-advisor disclosures should be added before launch if applicable.
       </div>
     </div>
   </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
