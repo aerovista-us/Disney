@@ -25,19 +25,19 @@
     children.insertAdjacentHTML("afterend", `<small>We’ll ask ages so ticket rules are more accurate.</small>`);
   }
 
-  const lodging = document.getElementById("lodging-night")?.closest("div");
+  const lodging = document.getElementById("lodging-night")?.closest(".money-field")?.parentElement;
   lodging?.insertAdjacentHTML("beforebegin", `
     <div><label for="stay-type">Where do you want to stay?</label><select id="stay-type" name="stayType"><option value="on">Disney / on-property</option><option value="off">Off-property</option><option value="split">Split stay / compare both</option><option value="manual">I’ll choose later</option></select></div>
     <div><label for="hotel-candidate">Hotel candidate</label><select id="hotel-candidate" name="hotelCandidate"><option value="manual">Choose destination first</option></select><small id="hotel-note">Hotel suggestions are planning anchors, not live room quotes.</small></div>
   `);
 
-  const food = document.getElementById("food-daily")?.closest("div");
+  const food = document.getElementById("food-daily")?.closest(".money-field")?.parentElement;
   food?.insertAdjacentHTML("beforebegin", `
     <div><label for="dining-style">Dining style</label><select id="dining-style" name="diningStyle"><option value="quick">Mostly quick-service</option><option value="mixed" selected>Mix of quick + table service</option><option value="table">Table-service forward</option><option value="character">Character / signature dining heavy</option></select></div>
   `);
   food?.insertAdjacentHTML("beforeend", `<small>Adjusted by dining style; still fully editable.</small>`);
 
-  const transport = document.getElementById("transport-total")?.closest("div");
+  const transport = document.getElementById("transport-total")?.closest(".money-field")?.parentElement;
   transport?.insertAdjacentHTML("beforebegin", `
     <div><label for="transfer-style">Airport / resort transfers</label><select id="transfer-style" name="transferStyle"><option value="resort">Transit / resort transport</option><option value="rideshare" selected>Rideshare / taxi</option><option value="rental">Rental car</option><option value="private">Private transfer</option><option value="manual">Custom amount</option></select></div>
   `);
@@ -66,6 +66,8 @@
   toast?.insertAdjacentHTML("beforebegin", `
     <div class="signed-overlay" id="signed-overlay" hidden aria-hidden="true"><div class="signed-overlay-backdrop" data-signed-close></div><div class="signed-overlay-card" role="dialog" aria-modal="true" aria-labelledby="signed-overlay-title"><button class="signed-overlay-close magic-click" type="button" aria-label="Close Signed with a J overlay" data-signed-close>×</button><span class="section-kicker">Jordan approved</span><h2 id="signed-overlay-title">Signed with a J.</h2><p class="signed-overlay-copy">A little final flourish for the trips, ideas, and recommendations that feel truly ready.</p><div class="signed-reveal" id="signed-reveal"><div class="signed-script-shell"><div class="signed-script-line"></div><div class="signed-script-mask"><div class="signed-script-wordmark">Signed with a J</div></div><div class="signed-script-underline"></div><div class="signed-script-heart">♡</div><div class="signed-script-tip"></div><span class="signed-star st1">✦</span><span class="signed-star st2">✧</span><span class="signed-star st3">✦</span><span class="signed-star st4">✧</span></div></div><div class="signed-overlay-actions"><button id="signed-replay" class="button button-secondary magic-click" type="button">Replay the magic</button><button class="button button-primary magic-click" type="button" data-signed-close>Back to the trip</button></div></div></div>
   `);
+
+  if (typeof bindMagicClicks === "function") bindMagicClicks();
 
   const script = document.createElement("script");
   script.src = "planner-v2.js";
