@@ -1,0 +1,77 @@
+.child-ages-shell{
+  margin-top:-.1rem;
+  padding:1rem;
+  border:1px solid rgba(119,137,209,.16);
+  border-radius:1rem;
+  background:rgba(255,255,255,.035);
+}
+.subfield-heading{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:baseline;
+  margin-bottom:.75rem;
+}
+.subfield-heading span{
+  font-size:.8rem;
+  color:var(--muted, #9aa7c7);
+}
+.child-age-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
+  gap:.65rem;
+}
+.child-age-field{
+  font-size:.78rem;
+  color:var(--muted, #9aa7c7);
+}
+.child-age-field input{
+  display:block;
+  width:100%;
+  margin-top:.3rem;
+}
+.builder-form small{
+  display:block;
+  margin-top:.34rem;
+  line-height:1.35;
+  color:rgba(176,188,221,.72);
+}
+#hotel-note,
+#route-note{
+  min-height:2.1em;
+}
+.cost-list > div:last-child{
+  border-bottom:0;
+}
+#premium-total{
+  color:#f3d9ff;
+}
+#flight-search-link{
+  text-align:center;
+}
+@media(max-width:720px){
+  .subfield-heading{display:block}
+  .subfield-heading span{display:block;margin-top:.25rem}
+  .child-age-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* Signed with a J */
+.panel-actions-signed{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:.7rem;align-items:stretch}
+.panel-actions-signed>*{width:100%;min-width:0}
+.button-signed{border:1px solid rgba(255,147,214,.45);background:linear-gradient(135deg,rgba(255,108,199,.22),rgba(160,123,255,.16));color:#fff4fb;box-shadow:0 14px 32px rgba(99,40,140,.25),inset 0 0 0 1px rgba(255,255,255,.06)}
+.button-signed:hover,.button-signed:focus-visible{transform:translateY(-1px);box-shadow:0 18px 36px rgba(99,40,140,.34),0 0 0 3px rgba(255,139,214,.18)}
+.signed-help{margin:.85rem 0 0;font-size:.95rem;color:rgba(239,240,255,.78)}
+.signature-story{margin-top:1.4rem;padding:1.15rem 1.1rem 1.2rem;border-radius:1.2rem;border:1px solid rgba(255,164,224,.18);background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,127,205,.07));box-shadow:0 18px 40px rgba(8,14,38,.16)}
+.signature-story h3{margin:.35rem 0 .5rem;font-size:1.35rem}.signature-story p{margin:0}.signature-story-actions{display:flex;flex-wrap:wrap;align-items:center;gap:.85rem;margin-top:1rem}.signature-tagline{color:rgba(239,240,255,.82);font-size:.95rem}
+.signed-overlay[hidden]{display:none!important}.signed-overlay{position:fixed;inset:0;z-index:120}.signed-overlay-backdrop{position:absolute;inset:0;background:radial-gradient(circle at center,rgba(40,26,90,.48),rgba(4,8,25,.82) 70%);backdrop-filter:blur(7px)}
+.signed-overlay-card{position:relative;width:min(92vw,980px);margin:min(8vh,4rem) auto;padding:1.3rem 1.25rem 1.35rem;border-radius:1.75rem;border:1px solid rgba(255,170,226,.28);background:linear-gradient(180deg,rgba(13,20,56,.96),rgba(10,17,49,.94));box-shadow:0 35px 90px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.08);overflow:hidden}
+.signed-overlay-card:before{content:"";position:absolute;inset:-30% auto auto -12%;width:420px;height:420px;background:radial-gradient(circle,rgba(255,123,221,.18),transparent 68%);pointer-events:none}.signed-overlay-card:after{content:"";position:absolute;right:-10%;bottom:-35%;width:420px;height:420px;background:radial-gradient(circle,rgba(143,126,255,.16),transparent 65%);pointer-events:none}
+.signed-overlay-close{position:absolute;top:.9rem;right:.95rem;inline-size:2.4rem;block-size:2.4rem;display:grid;place-items:center;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);color:#fff;font-size:1.4rem}.signed-overlay-copy{max-width:44rem;color:rgba(240,244,255,.82);margin:0 0 1rem}.signed-overlay-actions{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.signed-reveal{position:relative;margin:1.1rem 0 1.2rem;padding:1rem 0 .8rem}.signed-script-shell{position:relative;min-height:280px;isolation:isolate}.signed-script-line{position:absolute;left:6%;right:6%;top:48%;height:1px;background:linear-gradient(90deg,transparent,rgba(255,177,226,.1),transparent)}
+.signed-script-mask{overflow:hidden;width:0;filter:drop-shadow(0 0 18px rgba(255,110,199,.18))}.signed-script-wordmark{font-family:"Snell Roundhand","Segoe Script","Apple Chancery","Brush Script MT",cursive;font-size:clamp(3rem,9vw,7.3rem);line-height:.95;white-space:nowrap;letter-spacing:.02em;padding:1.2rem 3.8rem 2.6rem .5rem;background:linear-gradient(90deg,#9f84ff 2%,#ff5fb8 28%,#ffc7ef 50%,#ff77c8 72%,#a888ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 12px rgba(255,112,196,.16),0 0 30px rgba(173,125,255,.16)}
+.signed-script-underline{position:absolute;left:18%;right:10%;bottom:2.7rem;height:0;border-bottom:4px solid transparent;border-image:linear-gradient(90deg,#8d7bff,#ff74c6 58%,#ffd4f3) 1;transform:scaleX(0);transform-origin:left center;border-radius:999px;box-shadow:0 0 18px rgba(255,119,202,.2)}.signed-script-heart{position:absolute;right:2.6rem;top:30%;font-size:clamp(2rem,4vw,3.4rem);color:#ff9dd8;opacity:0;text-shadow:0 0 12px rgba(255,122,208,.36)}.signed-script-tip{position:absolute;width:20px;height:20px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.95),rgba(255,158,223,.88) 38%,rgba(255,158,223,0) 72%);filter:drop-shadow(0 0 14px rgba(255,170,228,.85));opacity:0;left:7%;top:34%}
+.signed-star{position:absolute;opacity:0;color:#ffd8f0;text-shadow:0 0 10px rgba(255,160,220,.45)}.signed-star.st1{left:5%;top:28%;font-size:2.6rem}.signed-star.st2{left:20%;top:72%;font-size:1.7rem}.signed-star.st3{right:22%;top:25%;font-size:1.9rem}.signed-star.st4{right:5%;bottom:24%;font-size:2rem}body.signed-overlay-open{overflow:hidden}
+.signed-overlay.is-active .signed-overlay-card{animation:signedCardIn .55s ease both}.signed-overlay.is-active .signed-script-mask{animation:signatureReveal 2.2s cubic-bezier(.25,.8,.25,1) .18s forwards}.signed-overlay.is-active .signed-script-underline{animation:signatureUnderline 1.5s cubic-bezier(.22,.61,.36,1) .95s forwards}.signed-overlay.is-active .signed-script-tip{animation:signatureTip 2.35s cubic-bezier(.27,.8,.23,1) .12s forwards}.signed-overlay.is-active .signed-script-heart{animation:heartReveal .55s ease 1.9s forwards}.signed-overlay.is-active .signed-star{animation:starBloom 1.2s ease forwards}.signed-overlay.is-active .st1{animation-delay:.35s}.signed-overlay.is-active .st2{animation-delay:1.05s}.signed-overlay.is-active .st3{animation-delay:1.55s}.signed-overlay.is-active .st4{animation-delay:2s}
+@keyframes signedCardIn{from{transform:translateY(22px) scale(.98);opacity:0}to{transform:translateY(0) scale(1);opacity:1}}@keyframes signatureReveal{from{width:0}to{width:min(100%,900px)}}@keyframes signatureUnderline{from{transform:scaleX(0);opacity:.25}to{transform:scaleX(1);opacity:1}}@keyframes signatureTip{0%{opacity:0;transform:translate(0,0) scale(.85)}8%{opacity:1}22%{transform:translate(180px,-18px) scale(1)}48%{transform:translate(465px,18px) scale(.92)}75%{transform:translate(700px,34px) scale(1)}100%{opacity:0;transform:translate(860px,42px) scale(.9)}}@keyframes heartReveal{from{opacity:0;transform:translateX(-18px) scale(.7) rotate(-10deg)}to{opacity:1;transform:translateX(0) scale(1) rotate(0)}}@keyframes starBloom{0%{opacity:0;transform:scale(.3) rotate(-15deg)}45%{opacity:1;transform:scale(1.15) rotate(6deg)}100%{opacity:.85;transform:scale(1) rotate(0)}}
+@media(max-width:760px){.signed-overlay-card{width:min(94vw,980px);margin:5vh auto;padding:1rem .95rem 1.1rem}.signed-script-shell{min-height:220px}.signed-script-wordmark{padding:1.35rem 1.5rem 2.4rem .35rem}.signed-script-underline{left:14%;right:8%;bottom:2.05rem}.signed-script-heart{right:.9rem;top:31%}}
+@media(prefers-reduced-motion:reduce){.signed-overlay.is-active .signed-overlay-card,.signed-overlay.is-active .signed-script-mask,.signed-overlay.is-active .signed-script-underline,.signed-overlay.is-active .signed-script-tip,.signed-overlay.is-active .signed-script-heart,.signed-overlay.is-active .signed-star{animation:none!important}.signed-script-mask{width:min(100%,900px)}.signed-script-underline{transform:scaleX(1)}.signed-script-heart,.signed-star{opacity:1}.signed-script-tip{display:none}}
