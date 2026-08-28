@@ -98,3 +98,9 @@ const navToggle=$(".nav-toggle"),nav=$("#site-nav");navToggle?.addEventListener(
 $("#trip-builder")?.addEventListener("submit",calculateTrip);$("#destination")?.addEventListener("change",syncDestination);$("#reset-builder")?.addEventListener("click",()=>{$("#trip-builder").reset();setDefaultDates();syncDestination();lastTrip=null;$("#grand-total").textContent="—";showToast("Trip designer reset.")});$("#copy-trip")?.addEventListener("click",async()=>{if(!lastTrip){showToast("Calculate a trip first.");return}try{await navigator.clipboard.writeText(tripBrief());showToast("Trip brief copied.")}catch{showToast("Copy blocked by browser.")}});
 $$('[data-pick]').forEach(b=>b.addEventListener('click',()=>{$("#destination").value=b.dataset.pick;syncDestination();$("#builder").scrollIntoView({behavior:"smooth"});setTimeout(()=>sparkleBurst(innerWidth/2,innerHeight/2,12),500)}));
 $("[data-year]").textContent=new Date().getFullYear();setDefaultDates();bindMagicClicks();loadPricing();
+
+(() => {
+  const script=document.createElement("script");
+  script.src="planner-v2-bootstrap.js";
+  document.head.appendChild(script);
+})();
