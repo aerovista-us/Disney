@@ -1,65 +1,58 @@
-# Jordan — Worldwide Disney Travel Planning
+# Jordan — Worldwide Disney Vacation Planning
 
-Canonical repository for Jordan's independent Disney-focused travel planning website.
+Static GitHub Pages site for Jordan's independent Disney-focused travel planning brand.
 
 ## Current architecture
 
-Zero-build static site:
+- `index.html` — public experience and trip designer
+- `styles.css` — responsive visual system and interaction styling
+- `app.js` — trip budgeting, date logic, offer matching, sparkles/fireworks, copyable brief
+- `data/pricing.json` — current public price intelligence and source links
 
-- `index.html` — semantic page structure and content
-- `styles.css` — responsive visual system
-- `app.js` — navigation, intake brief builder, and contact configuration
+No framework, build step, package manager or server is required.
 
-This intentionally has no framework or package dependencies so it can deploy directly on GitHub Pages or any static host.
+## Pricing model
 
-## Positioning
+The planner deliberately separates:
 
-Jordan is positioned as a worldwide Disney vacation planning specialist with a former flight-attendant perspective on trip flow, comfort, logistics, and international travel.
+1. **Published** — rates copied from official public Disney destination pages.
+2. **Date exact** — published date-calendar pricing (currently strongest for Tokyo Disney Resort).
+3. **Estimate** — user-editable lodging, airfare, dining and transport planning values.
+4. **Live check** — products where static data would be misleading, such as Disney Cruise Line or dynamic Disneyland Paris pricing.
 
-Primary destination coverage:
+Pricing snapshot updated: **2026-08-28**.
 
-- Walt Disney World
-- Disneyland Resort
-- Disney Cruise Line
-- Aulani
-- Disneyland Paris
-- Tokyo Disney Resort
-- Hong Kong Disneyland
-- Shanghai Disney Resort
-- Adventures by Disney / multi-city Disney travel
+### Primary sources used in the current snapshot
 
-## Before public launch
+- Walt Disney World tickets and 4-Park Magic Ticket offer
+- Disneyland Resort ticket pricing FAQ and current offers
+- Tokyo Disney Resort official dated ticket calendar
+- Hong Kong Disneyland official 2026 offer terms / published tier values
+- Shanghai Disney Resort official pricing policy and current offers
+- Disneyland Paris official ticket shop
+- Disney Cruise Line official cruise search and special-rate page
+- Aulani / Disney offer pages
 
-1. Add Jordan's real headshot and replace the founder-image placeholder.
-2. Set Jordan's real booking email in `SITE_CONFIG.plannerEmail` inside `app.js`, or replace the email workflow with a booking/CRM endpoint.
-3. Add verified testimonials only after Jordan has permission to publish them.
-4. Add the final business/agency name if different from Jordan's personal brand.
-5. Confirm host/domain and then add canonical URL, Open Graph URL, and social-share image metadata.
-6. Add privacy policy / terms appropriate to the booking workflow and any analytics used.
-7. If Jordan books travel through a host agency, add any required seller-of-travel, host-agency, or advisor disclosures.
+Do not present a snapshot as a guaranteed bookable price. Recheck source links before purchase.
 
-## Trip intake
+## Magic interaction layer
 
-The current form creates a clean traveler brief in-browser and allows the visitor to copy it. Once `plannerEmail` is configured, the email action can be enabled without introducing a backend.
+- Sparkles on interactive clicks
+- Firework burst on trip calculation
+- Animated orbit hero
+- Ambient stars and twinkles
+- Reduced-motion support for accessibility
 
-For production lead capture, a CRM/form endpoint is preferable so inquiries are not lost if the visitor closes the page.
+## Next production upgrades
 
-## Future roadmap
+1. Add Jordan's real photo and brand mark.
+2. Configure real consultation/contact destination.
+3. Add a licensed live hotel/airfare API or serverless pricing service if desired.
+4. Add analytics and conversion tracking.
+5. Add destination guide pages / SEO content.
+6. Add CRM or lead form backend.
+7. Automate `data/pricing.json` refresh via scheduled workflow only where source terms permit automated access.
 
-Possible next evolution:
+## Legal / brand note
 
-- Destination detail pages
-- Jordan's travel guides / SEO content
-- FAQ/content CMS
-- Client testimonials
-- Lead CRM integration
-- Consultation scheduling
-- Email newsletter capture
-- Trip request persistence
-- Analytics
-- Custom domain
-- Optional migration to a travel CMS such as the Voyagr architecture reviewed separately
-
-## Independence / trademark note
-
-This is intended as an independent travel-planning website. Disney names and destination names should be used only to accurately describe the services and destinations Jordan helps clients plan. Do not imply official affiliation, sponsorship, or endorsement unless Jordan actually has the corresponding authorized relationship and disclosure language.
+This project is an independent travel-planning website and must not imply that it is an official Disney property or that Jordan holds credentials/authorization that have not been verified.
