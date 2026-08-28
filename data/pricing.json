@@ -1,0 +1,325 @@
+{
+  "updatedAt": "2026-08-28",
+  "disclaimer": "Published prices change frequently and availability is not guaranteed. Verified rates are snapshots from official public sources; planning estimates are intentionally labeled and should be rechecked before purchase.",
+  "destinations": {
+    "wdw": {
+      "name": "Walt Disney World Resort",
+      "location": "Orlando, Florida",
+      "currency": "USD",
+      "symbol": "$",
+      "ticketModel": "starting",
+      "adultOneDayFrom": 119,
+      "childOneDayFrom": null,
+      "ageNote": "Official public page lists 1-day pricing from $119 for ages 10+ before tax.",
+      "sourceLabel": "Walt Disney World tickets",
+      "sourceUrl": "https://disneyworld.disney.go.com/admission/tickets/",
+      "offers": [
+        {
+          "title": "4-Park Magic Ticket",
+          "price": 436,
+          "unit": "total / adult",
+          "detail": "4 park days, one admission to each of the 4 theme parks",
+          "validThrough": "2026-09-26",
+          "eligibility": "Select start dates",
+          "sourceUrl": "https://disneyworld.disney.go.com/admission/tickets/four-park-magic-ticket-offer/"
+        },
+        {
+          "title": "2-Day, 2-Park Ticket",
+          "price": 199,
+          "unit": "total / adult",
+          "detail": "EPCOT + Animal Kingdom only",
+          "validThrough": "2026-09-30",
+          "eligibility": "Select start dates Aug 3–Sep 30, 2026",
+          "sourceUrl": "https://disneyworld.disney.go.com/admission/tickets/"
+        }
+      ]
+    },
+    "dlr": {
+      "name": "Disneyland Resort",
+      "location": "Anaheim, California",
+      "currency": "USD",
+      "symbol": "$",
+      "ticketModel": "multiday_exact",
+      "multiDay": {
+        "2": {"adult": 335, "child": 315},
+        "3": {"adult": 425, "child": 400},
+        "4": {"adult": 480, "child": 450},
+        "5": {"adult": 520, "child": 485}
+      },
+      "hopper": {
+        "2": {"adult": 435, "child": 415},
+        "3": {"adult": 535, "child": 510},
+        "4": {"adult": 600, "child": 570},
+        "5": {"adult": 655, "child": 620}
+      },
+      "ageNote": "Adult ages 10+; child ages 3–9; age 2 and under does not require a ticket.",
+      "sourceLabel": "Disneyland ticket pricing FAQ",
+      "sourceUrl": "https://disneyland.disney.go.com/faq/tickets/ticket-prices/",
+      "offers": [
+        {
+          "title": "Anaheim Resident 1-Day Ticket",
+          "price": 71,
+          "unit": "adult / day",
+          "detail": "1 park per day",
+          "validThrough": "2026-10-08",
+          "eligibility": "Anaheim residents; reservation required",
+          "sourceUrl": "https://disneyland.disney.go.com/offers-discounts/anaheim-resident-2026/"
+        },
+        {
+          "title": "Kids Summer Park Hopper",
+          "price": 50,
+          "unit": "child / day",
+          "detail": "Special 1-day Park Hopper for ages 3–9",
+          "validThrough": "2026-09-07",
+          "eligibility": "Subject to park reservation availability",
+          "sourceUrl": "https://disneyland.disney.go.com/offers-discounts/"
+        },
+        {
+          "title": "Disneyland Resort Hotel Savings",
+          "price": null,
+          "unit": "up to 25% off",
+          "detail": "Select room types on stays of 4+ nights",
+          "validThrough": "2026-09-07",
+          "eligibility": "Subject to availability and restrictions",
+          "sourceUrl": "https://disneyland.disney.go.com/offers-discounts/summer-2026-room-offer/"
+        }
+      ]
+    },
+    "tokyo": {
+      "name": "Tokyo Disney Resort",
+      "location": "Urayasu, Japan",
+      "currency": "JPY",
+      "symbol": "¥",
+      "ticketModel": "date_exact_adult",
+      "adultOneDayFrom": 8900,
+      "juniorOneDayFrom": 7400,
+      "childOneDayFrom": 5300,
+      "ageNote": "Adult 18+; junior 12–17; child 4–11; age 3 and under free.",
+      "sourceLabel": "Tokyo Disney Resort ticket calendar",
+      "sourceUrl": "https://www.tokyodisneyresort.jp/en/ticket/index/",
+      "datePricesAdult": {
+        "2026-08-28": 9400,
+        "2026-08-29": 9900,
+        "2026-08-30": 9900,
+        "2026-08-31": 8900,
+        "2026-09-01": 8900,
+        "2026-09-02": 8900,
+        "2026-09-03": 8900,
+        "2026-09-04": 8900,
+        "2026-09-05": 9900,
+        "2026-09-06": 9900,
+        "2026-09-07": 9400,
+        "2026-09-08": 9400,
+        "2026-09-09": 9400,
+        "2026-09-10": 9400,
+        "2026-09-11": 9400,
+        "2026-09-12": 9900,
+        "2026-09-13": 9900,
+        "2026-09-14": 9900,
+        "2026-09-15": 9900,
+        "2026-09-16": 9900,
+        "2026-09-17": 9900,
+        "2026-09-18": 9900,
+        "2026-09-19": 10900,
+        "2026-09-20": 10900,
+        "2026-09-21": 10900,
+        "2026-09-22": 10900,
+        "2026-09-23": 10900,
+        "2026-09-24": 9900,
+        "2026-09-25": 9900,
+        "2026-09-26": 10900,
+        "2026-09-27": 10900,
+        "2026-09-28": 9900,
+        "2026-09-29": 9900,
+        "2026-09-30": 9900,
+        "2026-10-01": 9900,
+        "2026-10-02": 9900,
+        "2026-10-03": 10900,
+        "2026-10-04": 10900,
+        "2026-10-05": 10900,
+        "2026-10-06": 10900,
+        "2026-10-07": 10900,
+        "2026-10-08": 10900,
+        "2026-10-09": 10900,
+        "2026-10-10": 11900,
+        "2026-10-11": 12400,
+        "2026-10-12": 10900,
+        "2026-10-13": 10900,
+        "2026-10-14": 10900,
+        "2026-10-15": 10900,
+        "2026-10-16": 10900,
+        "2026-10-17": 12400,
+        "2026-10-18": 11900,
+        "2026-10-19": 10900,
+        "2026-10-20": 10900,
+        "2026-10-21": 10900,
+        "2026-10-22": 10900,
+        "2026-10-23": 10900,
+        "2026-10-24": 12400,
+        "2026-10-25": 11900,
+        "2026-10-26": 10900,
+        "2026-10-27": 10900,
+        "2026-10-28": 10900,
+        "2026-10-29": 10900,
+        "2026-10-30": 10900,
+        "2026-10-31": 12400,
+        "2026-11-01": 10900,
+        "2026-11-02": 9900,
+        "2026-11-03": 9900,
+        "2026-11-04": 9900,
+        "2026-11-05": 9900,
+        "2026-11-06": 9900,
+        "2026-11-07": 10900,
+        "2026-11-08": 10900,
+        "2026-11-09": 10900,
+        "2026-11-10": 10900,
+        "2026-11-11": 10900,
+        "2026-11-12": 10900,
+        "2026-11-13": 10900,
+        "2026-11-14": 12400,
+        "2026-11-15": 11900,
+        "2026-11-16": 10900,
+        "2026-11-17": 10900,
+        "2026-11-18": 10900,
+        "2026-11-19": 10900,
+        "2026-11-20": 10900,
+        "2026-11-21": 12400,
+        "2026-11-22": 12400,
+        "2026-11-23": 10900,
+        "2026-11-24": 10900,
+        "2026-11-25": 10900,
+        "2026-11-26": 10900,
+        "2026-11-27": 10900,
+        "2026-11-28": 12400
+      }
+    },
+    "hk": {
+      "name": "Hong Kong Disneyland",
+      "location": "Lantau Island, Hong Kong",
+      "currency": "HKD",
+      "symbol": "HK$",
+      "ticketModel": "tiered",
+      "tiers": {
+        "1": {"adult": 669, "child": 499},
+        "2": {"adult": 759, "child": 569},
+        "3": {"adult": 849, "child": 639},
+        "4": {"adult": 939, "child": 705}
+      },
+      "twoDay": {"adult": 1132, "child": 849},
+      "ageNote": "Published tier values from current official 2026 offer terms; check the live tier calendar for your date.",
+      "sourceLabel": "Hong Kong Disneyland current published ticket values",
+      "sourceUrl": "https://www.hongkongdisneyland.com/offers-discounts/offerCAAia/",
+      "offers": [
+        {
+          "title": "Non-stop 2-Day Fun Ticket",
+          "price": 769,
+          "unit": "adult from",
+          "detail": "Two consecutive park visits",
+          "validThrough": "2026-12-31",
+          "eligibility": "Price varies by ticket tier; official website purchase",
+          "sourceUrl": "https://www.hongkongdisneyland.com/offers-discounts/non-stop-2-day-fun-ticket/"
+        }
+      ]
+    },
+    "shanghai": {
+      "name": "Shanghai Disney Resort",
+      "location": "Shanghai, China",
+      "currency": "CNY",
+      "symbol": "¥",
+      "ticketModel": "range",
+      "adultOneDayMin": 475,
+      "adultOneDayMax": 799,
+      "ageNote": "Shanghai confirmed the entry and top tiers remain RMB 475 and RMB 799 after the pricing refinement.",
+      "sourceLabel": "Shanghai Disney Resort pricing policy",
+      "sourceUrl": "https://www.shanghaidisneyresort.com/en/announcement/new-standard-and-others-pricing-policy",
+      "offers": [
+        {
+          "title": "1-Day Early Bird Ticket",
+          "price": 669,
+          "unit": "from",
+          "detail": "Current official early-booking product",
+          "validThrough": null,
+          "eligibility": "Availability and selected dates",
+          "sourceUrl": "https://www.shanghaidisneyresort.com/en/"
+        },
+        {
+          "title": "Limited-Time 2-Day Ticket",
+          "price": 999,
+          "unit": "from",
+          "detail": "Current official two-day offer",
+          "validThrough": null,
+          "eligibility": "Availability and selected dates",
+          "sourceUrl": "https://www.shanghaidisneyresort.com/en/"
+        }
+      ]
+    },
+    "paris": {
+      "name": "Disneyland Paris",
+      "location": "Marne-la-Vallée, France",
+      "currency": "EUR",
+      "symbol": "€",
+      "ticketModel": "live_lookup",
+      "ageNote": "Dated pricing is dynamic. Children under 3 enter free; child pricing applies ages 3–11.",
+      "sourceLabel": "Disneyland Paris ticket shop",
+      "sourceUrl": "https://tickets.disneylandparis.com/en-usd/tickets",
+      "offers": []
+    },
+    "aulani": {
+      "name": "Aulani, A Disney Resort & Spa",
+      "location": "Ko Olina, Hawaiʻi",
+      "currency": "USD",
+      "symbol": "$",
+      "ticketModel": "hotel_live_lookup",
+      "ageNote": "Aulani is a resort stay rather than a theme-park ticket product.",
+      "sourceLabel": "Aulani offers",
+      "sourceUrl": "https://www.disneyaulani.com/special-offers/",
+      "offers": [
+        {
+          "title": "Magic Key late-summer savings",
+          "price": null,
+          "unit": "up to 30% off",
+          "detail": "5-night or longer select stays",
+          "validThrough": "2026-10-18",
+          "eligibility": "Eligible Magic Key holders; book through Sep 27, 2026",
+          "sourceUrl": "https://disneyland.disney.go.com/offers-discounts/"
+        },
+        {
+          "title": "Magic Key fall savings",
+          "price": null,
+          "unit": "up to 35% off",
+          "detail": "5-night or longer select stays",
+          "validThrough": "2026-12-23",
+          "eligibility": "Eligible Magic Key holders; book through Dec 2, 2026",
+          "sourceUrl": "https://disneyland.disney.go.com/offers-discounts/"
+        }
+      ]
+    },
+    "cruise": {
+      "name": "Disney Cruise Line",
+      "location": "Worldwide sailings",
+      "currency": "USD",
+      "symbol": "$",
+      "ticketModel": "live_lookup",
+      "ageNote": "Cruise fares vary by ship, sailing, stateroom, party and taxes/fees. Use the official Find Prices flow for a quote.",
+      "sourceLabel": "Disney Cruise Line cruise search",
+      "sourceUrl": "https://disneycruise.disney.go.com/cruises-destinations/list/",
+      "offers": [
+        {
+          "title": "Select restricted-rate sailings",
+          "price": null,
+          "unit": "up to 25% off",
+          "detail": "Select 2026 sailings and stateroom categories",
+          "validThrough": "2026-10-30",
+          "eligibility": "New bookings; restricted-rate terms apply",
+          "sourceUrl": "https://disneycruise.disney.go.com/special-offers/domestic-special-rates/"
+        }
+      ]
+    }
+  },
+  "travelTools": [
+    {"name": "Google Flights", "url": "https://www.google.com/travel/flights", "use": "Compare live airfare and schedules"},
+    {"name": "Google Hotels", "url": "https://www.google.com/travel/hotels", "use": "Compare live hotel inventory around a destination"},
+    {"name": "KAYAK", "url": "https://www.kayak.com/", "use": "Cross-check airfare, hotels and rental cars"},
+    {"name": "Booking.com", "url": "https://www.booking.com/", "use": "Compare off-property lodging and cancellation terms"}
+  ]
+}
