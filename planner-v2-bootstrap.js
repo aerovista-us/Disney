@@ -7,6 +7,11 @@
   css.href = "planner-v2.css";
   document.head.appendChild(css);
 
+  const mobileCss = document.createElement("link");
+  mobileCss.rel = "stylesheet";
+  mobileCss.href = "mobile-contrast.css";
+  document.head.appendChild(mobileCss);
+
   const form = document.getElementById("trip-builder");
   if (!form) return;
 
