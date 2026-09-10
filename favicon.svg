@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jordan J monogram">
+  <defs>
+    <linearGradient id="bg" x1="8" y1="6" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7565ee"/>
+      <stop offset=".55" stop-color="#a94fd1"/>
+      <stop offset="1" stop-color="#e44f99"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(43 16) rotate(124) scale(31)">
+      <stop stop-color="#ffdca0" stop-opacity=".46"/>
+      <stop offset="1" stop-color="#ffdca0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="18" fill="#101a3c"/>
+  <rect x="4.5" y="4.5" width="55" height="55" rx="16.5" fill="url(#bg)" opacity=".95"/>
+  <rect x="4.5" y="4.5" width="55" height="55" rx="16.5" fill="url(#glow)"/>
+  <path d="M39.8 15.2v24.1c0 7.6-4.1 11.6-11 11.6-5.2 0-9.1-2.5-10.8-6.8l6.2-3.1c.9 2.2 2.2 3.3 4.3 3.3 2.7 0 4-1.6 4-5.3V21.7h-7.1v-6.5h14.4Z" fill="#fff"/>
+  <path d="M48.8 11.3 50.3 15l3.7 1.5-3.7 1.5-1.5 3.7-1.5-3.7-3.7-1.5 3.7-1.5 1.5-3.7Z" fill="#ffe0a0"/>
+  <path d="M15.3 22.6 16.3 25l2.4 1-2.4 1-1 2.4-1-2.4-2.4-1 2.4-1 1-2.4Z" fill="#ffd9f0"/>
+  <circle cx="46" cy="45" r="2" fill="#fff" opacity=".88"/>
+</svg>
