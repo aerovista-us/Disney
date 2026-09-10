@@ -1,0 +1,58 @@
+/* Jordan conversion + signature v3 */
+.book-jordan-section{padding:86px 0;background:linear-gradient(180deg,#fff9fd 0%,#f7f5ff 100%);border-top:1px solid rgba(20,32,59,.06);border-bottom:1px solid rgba(20,32,59,.06)}
+.book-jordan-shell{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:start}
+.book-jordan-intro{position:sticky;top:104px}
+.book-jordan-intro h2{font-size:clamp(2.4rem,4.8vw,4.6rem);line-height:.96;letter-spacing:-.055em;margin:12px 0 18px}
+.book-jordan-intro p{color:var(--muted);font-size:1.02rem;max-width:560px}
+.book-jordan-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.book-jordan-reasons{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.book-reason{background:#fff;border:1px solid rgba(20,32,59,.11);border-radius:22px;padding:20px;box-shadow:0 14px 38px rgba(25,30,70,.06)}
+.book-reason strong{display:block;font-size:1rem;margin:8px 0 6px;color:var(--ink)}
+.book-reason p{margin:0;color:var(--muted);font-size:.83rem}
+.book-reason .book-icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#efeaff,#ffe7f3);color:#6b4ed2;font-weight:900;font-size:1.1rem}
+.book-jordan-path{grid-column:1/-1;margin-top:4px;padding:20px;border-radius:22px;background:linear-gradient(145deg,#121f48,#24194f);color:#fff;box-shadow:0 22px 50px rgba(15,22,60,.18)}
+.book-jordan-path h3{margin:0 0 14px;font-size:1.25rem}
+.book-path-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.book-path-step{padding:14px;border:1px solid rgba(255,255,255,.11);border-radius:16px;background:rgba(255,255,255,.055)}
+.book-path-step b{display:flex;align-items:center;gap:9px;margin-bottom:5px}
+.book-path-step i{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#fff;color:#3e2b9e;font-style:normal;font-size:.78rem}
+.book-path-step span{font-size:.76rem;color:#c8d0e9}
+.hero-book-nudge{margin-top:-13px;margin-bottom:24px;font-size:.86rem;color:#5e6780}
+.hero-book-nudge a{color:#5c44d5;font-weight:900;text-decoration:underline;text-underline-offset:3px}
+.booking-ready-card{display:none;margin:15px 0 18px;padding:15px;border-radius:16px;background:linear-gradient(135deg,rgba(255,129,199,.13),rgba(153,128,255,.13));border:1px solid rgba(255,182,226,.21)}
+.booking-ready-card.is-ready{display:block;animation:bookReadyIn .45s ease both}
+.booking-ready-card strong{display:block;color:#fff;margin-bottom:4px}
+.booking-ready-card p{margin:0 0 12px;color:#cbd2eb;font-size:.76rem}
+.booking-ready-actions{display:flex;gap:8px;flex-wrap:wrap}
+.booking-ready-actions .button{min-height:44px;padding:10px 14px;font-size:.78rem}
+.mobile-book-bar{display:none}
+@keyframes bookReadyIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* Robust Signed with a J desktop reveal: JS drives WAAPI, these rules remove old CSS animation conflicts. */
+.signed-overlay[data-v3-signature="true"] .signed-script-mask{width:100%!important;clip-path:inset(0 100% 0 0);animation:none!important}
+.signed-overlay[data-v3-signature="true"] .signed-script-underline{animation:none!important;transform:scaleX(0)}
+.signed-overlay[data-v3-signature="true"] .signed-script-heart{animation:none!important;opacity:0}
+.signed-overlay[data-v3-signature="true"] .signed-script-tip{animation:none!important;opacity:0}
+.signed-overlay[data-v3-signature="true"] .signed-star{animation:none!important;opacity:0}
+.signed-overlay[data-v3-signature="true"] .signed-script-wordmark{will-change:filter,opacity}
+
+@media(max-width:900px){
+  .book-jordan-section{padding:58px 0}
+  .book-jordan-shell{grid-template-columns:1fr}
+  .book-jordan-intro{position:static}
+  .book-jordan-reasons{grid-template-columns:1fr 1fr}
+  .book-jordan-path{grid-column:auto}
+  .book-path-steps{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  body{padding-bottom:76px}
+  .book-jordan-section{padding:52px 0}
+  .book-jordan-intro h2{font-size:clamp(2.1rem,11vw,3.15rem)}
+  .book-jordan-reasons{grid-template-columns:1fr}
+  .book-jordan-actions{display:grid;grid-template-columns:1fr}
+  .book-jordan-actions .button{width:100%}
+  .mobile-book-bar{position:fixed;display:flex;left:10px;right:10px;bottom:10px;z-index:95;gap:8px;padding:8px;border-radius:18px;background:rgba(11,21,53,.94);border:1px solid rgba(255,255,255,.12);backdrop-filter:blur(16px);box-shadow:0 16px 45px rgba(10,16,45,.28)}
+  .mobile-book-bar a{flex:1;min-height:52px}
+  .mobile-book-bar .mobile-book-secondary{flex:0 0 52px;width:52px;padding:0;border-radius:14px;background:rgba(255,255,255,.10)!important;color:#fff!important;border:1px solid rgba(255,255,255,.18)!important}
+}
+@media(prefers-reduced-motion:reduce){.booking-ready-card.is-ready{animation:none}}
