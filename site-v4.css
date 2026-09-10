@@ -1,0 +1,163 @@
+/* Jordan v4 — hero image, real contact handoff, reliable SVG signature */
+
+/* Hero image layered into the magical visual */
+.magic-orbit-card{overflow:hidden!important;isolation:isolate}
+.magic-orbit-card .hero-brand-art{
+  position:absolute;
+  inset:14px;
+  width:calc(100% - 28px);
+  height:calc(100% - 28px);
+  object-fit:cover;
+  object-position:center;
+  border-radius:inherit;
+  z-index:0;
+  opacity:.58;
+  filter:saturate(1.12) contrast(1.04) brightness(.72);
+  transform:scale(1.015);
+}
+.magic-orbit-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 48% 48%,rgba(12,19,54,.18),rgba(8,15,43,.55) 68%),
+    linear-gradient(180deg,rgba(9,15,43,.08),rgba(13,17,54,.50));
+}
+.magic-orbit-card>.orbit,
+.magic-orbit-card>.orbit-core,
+.magic-orbit-card>.orbit-star{position:absolute;z-index:3}
+.magic-orbit-card::after{z-index:4!important}
+.hero-art-badge{
+  position:absolute;
+  z-index:5;
+  left:22px;
+  bottom:22px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 11px;
+  border-radius:999px;
+  color:#fff;
+  background:rgba(8,15,43,.68);
+  border:1px solid rgba(255,190,228,.24);
+  backdrop-filter:blur(12px);
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.04em;
+  box-shadow:0 8px 28px rgba(0,0,0,.16);
+}
+.hero-art-badge span{color:#ffd27c}
+
+/* Formspree contact card */
+.jordan-contact-card{
+  margin-top:20px;
+  padding:18px;
+  border-radius:20px;
+  background:#fff;
+  border:1px solid rgba(20,32,59,.11);
+  box-shadow:0 18px 44px rgba(25,30,70,.07);
+}
+.jordan-contact-card h3{margin:0 0 5px;color:#151d3d;font-size:1.08rem}
+.jordan-contact-card>p{margin:0 0 14px!important;color:#66708b!important;font-size:.86rem!important}
+.jordan-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.jordan-contact-card label,
+.signed-booking-form label{display:grid;gap:5px;font-size:.78rem;font-weight:800;color:#323c5c}
+.jordan-contact-card .field-span-2{grid-column:1/-1}
+.jordan-contact-card input,
+.jordan-contact-card textarea,
+.signed-booking-form input,
+.signed-booking-form textarea{
+  width:100%;
+  min-height:46px;
+  padding:11px 12px;
+  border:1px solid rgba(34,47,87,.17);
+  border-radius:12px;
+  background:#fff;
+  color:#131b38;
+  font:inherit;
+  outline:none;
+}
+.jordan-contact-card textarea,
+.signed-booking-form textarea{min-height:90px;resize:vertical}
+.jordan-contact-card input:focus,
+.jordan-contact-card textarea:focus,
+.signed-booking-form input:focus,
+.signed-booking-form textarea:focus{border-color:#7d60e8;box-shadow:0 0 0 3px rgba(125,96,232,.13)}
+.formspree-status{min-height:1.25em;margin:9px 0 0;color:#56617e;font-size:.8rem}
+.formspree-status.is-success{color:#16785a;font-weight:800}
+.formspree-status.is-error{color:#a12d56;font-weight:800}
+
+/* v4 takes complete ownership of the Signed with a J modal */
+.signed-v4-card{
+  position:relative;
+  width:min(94vw,980px);
+  max-height:92vh;
+  overflow:auto;
+  margin:4vh auto;
+  padding:24px;
+  border-radius:28px;
+  border:1px solid rgba(255,158,221,.30);
+  color:#fff;
+  background:
+    radial-gradient(circle at 18% 12%,rgba(236,92,181,.16),transparent 28%),
+    radial-gradient(circle at 84% 82%,rgba(115,84,230,.18),transparent 35%),
+    linear-gradient(160deg,#101944 0%,#0b1437 58%,#1b1647 100%);
+  box-shadow:0 36px 95px rgba(0,0,0,.48),0 0 0 1px rgba(255,255,255,.035) inset;
+}
+.signed-v4-card .section-kicker{color:#b992ff!important}
+.signed-v4-card h2{margin:.3rem 0 .5rem;color:#fff!important;font-size:clamp(2rem,3.5vw,3rem)}
+.signed-v4-card .signed-overlay-copy{color:#d5dbef!important;margin-bottom:5px}
+.signed-v4-stage{
+  position:relative;
+  margin:12px 0 18px;
+  border-radius:22px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(239,94,178,.11),transparent 38%),
+    linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.005));
+  border:1px solid rgba(255,255,255,.07);
+}
+.signed-v4-svg{display:block;width:100%;height:auto;min-height:210px}
+.signed-v4-text{
+  font-family:"Segoe Script","Snell Roundhand","Apple Chancery","Brush Script MT",cursive;
+  font-weight:500;
+  fill:url(#signedV4Gradient);
+  filter:url(#signedV4Glow);
+}
+.signed-v4-heart{fill:none;stroke:#ff9cd4;stroke-width:4;filter:url(#signedV4Glow)}
+.signed-v4-underline{fill:none;stroke:url(#signedV4Gradient);stroke-width:5;stroke-linecap:round;filter:url(#signedV4Glow)}
+.signed-v4-star{fill:#ffd4ee;opacity:0;transform-box:fill-box;transform-origin:center}
+.signed-v4-pen{opacity:0;filter:url(#signedV4Glow)}
+.signed-v4-pen-core{fill:#fff}
+.signed-v4-pen-ring{fill:none;stroke:#ff88c9;stroke-width:3}
+
+.signed-v4-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+.signed-v4-actions .button{min-width:175px}
+.signed-v4-booking-shell{margin-top:16px;padding:16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.10)}
+.signed-v4-booking-shell h3{margin:0 0 4px;color:#fff;font-size:1.05rem}
+.signed-v4-booking-shell>p{margin:0 0 13px;color:#cbd2ea;font-size:.82rem}
+.signed-booking-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.signed-booking-grid .field-span-2{grid-column:1/-1}
+.signed-booking-form label{color:#edf1ff}
+.signed-booking-form input,
+.signed-booking-form textarea{background:rgba(255,255,255,.96);color:#101831}
+.signed-booking-submit{width:100%;margin-top:11px;min-height:50px}
+.signed-v4-demo-note{text-align:center;color:#c9d0e7;font-size:.82rem;margin:10px 0 0}
+.signed-v4-demo-note a{color:#ff9cd5;font-weight:900}
+
+@media(max-width:760px){
+  .magic-orbit-card .hero-brand-art{inset:9px;width:calc(100% - 18px);height:calc(100% - 18px);opacity:.52}
+  .hero-art-badge{left:14px;bottom:14px;font-size:.66rem}
+  .jordan-contact-grid,.signed-booking-grid{grid-template-columns:1fr}
+  .jordan-contact-card .field-span-2,.signed-booking-grid .field-span-2{grid-column:auto}
+  .signed-v4-card{width:min(95vw,980px);padding:16px;border-radius:22px;margin:2.5vh auto}
+  .signed-v4-svg{min-height:155px}
+  .signed-v4-actions{display:grid;grid-template-columns:1fr}
+  .signed-v4-actions .button{width:100%;min-width:0}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .signed-v4-star{opacity:.9!important}
+}
