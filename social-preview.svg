@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Jordan Disney travel planning social preview">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0b1535"/>
+      <stop offset=".46" stop-color="#1c2255"/>
+      <stop offset=".75" stop-color="#4a245e"/>
+      <stop offset="1" stop-color="#151b42"/>
+    </linearGradient>
+    <radialGradient id="pinkGlow" cx="0" cy="0" r="1" gradientTransform="translate(885 190) rotate(136) scale(365 300)">
+      <stop stop-color="#ff75c4" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#ff75c4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow" cx="0" cy="0" r="1" gradientTransform="translate(920 390) rotate(90) scale(210 310)">
+      <stop stop-color="#ffd58f" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#ffd58f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="jgrad" x1="40" y1="20" x2="160" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a99bff"/>
+      <stop offset=".46" stop-color="#ff82c6"/>
+      <stop offset="1" stop-color="#ffd6ef"/>
+    </linearGradient>
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <rect width="1200" height="630" fill="url(#pinkGlow)"/>
+  <rect width="1200" height="630" fill="url(#goldGlow)"/>
+
+  <g opacity=".9">
+    <circle cx="105" cy="98" r="2.5" fill="#fff"/>
+    <circle cx="165" cy="156" r="1.6" fill="#ffd98c"/>
+    <circle cx="301" cy="82" r="2" fill="#ffb4df"/>
+    <circle cx="530" cy="124" r="1.7" fill="#fff"/>
+    <circle cx="728" cy="83" r="2.3" fill="#a7dfff"/>
+    <circle cx="1090" cy="123" r="2" fill="#fff"/>
+    <circle cx="1112" cy="300" r="1.8" fill="#ffd98c"/>
+    <circle cx="785" cy="536" r="2" fill="#ffb4df"/>
+  </g>
+
+  <g transform="translate(72 70)">
+    <rect width="150" height="150" rx="42" fill="#111a40" stroke="#ffacd9" stroke-opacity=".55" stroke-width="2"/>
+    <text x="47" y="113" font-family="Georgia, serif" font-size="118" font-weight="700" fill="url(#jgrad)">J</text>
+    <path d="M124 24 129 36l12 5-12 5-5 12-5-12-12-5 12-5 5-12Z" fill="#ffe3a8" filter="url(#softGlow)"/>
+    <path d="M28 42 31 49l7 3-7 3-3 7-3-7-7-3 7-3 3-7Z" fill="#ffd8f0"/>
+  </g>
+
+  <g transform="translate(70 270)">
+    <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="800" letter-spacing="5" fill="#ffd0ed">WORLDWIDE DISNEY VACATION PLANNING</text>
+    <text x="0" y="86" font-family="Georgia, serif" font-size="70" font-weight="700" fill="#ffffff">Disney trips,</text>
+    <text x="0" y="162" font-family="Georgia, serif" font-size="70" font-style="italic" font-weight="400" fill="#ff8fcb">beautifully planned.</text>
+    <text x="0" y="215" font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#d9dff2">From runway to wonder — build, compare, and book with Jordan.</text>
+  </g>
+
+  <g transform="translate(735 170)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 300C88 180 174 115 293 62" stroke="#ffc982" stroke-width="3" stroke-opacity=".7" stroke-dasharray="7 12"/>
+    <path d="M271 59 296 51 285 76" stroke="#ffe4ac" stroke-width="5"/>
+    <path d="M95 300v-95h48v95M143 300V153h50v147M193 300v-68h47v68M240 300v-116h48v116M288 300v-86h44v86" stroke="#fff" stroke-opacity=".88" stroke-width="5"/>
+    <path d="M106 205l13-24 12 24M150 153l18-31 18 31M247 184l17-28 16 28" stroke="#ffb6de" stroke-width="5"/>
+    <path d="M77 300h284" stroke="#ffffff" stroke-opacity=".44" stroke-width="4"/>
+    <path d="M102 335c76-22 166-18 248 3" stroke="#9fdcff" stroke-opacity=".35" stroke-width="4"/>
+    <path d="M112 359c61-14 144-9 217 8" stroke="#ff96cd" stroke-opacity=".32" stroke-width="3"/>
+  </g>
+
+  <g fill="#ffe1a3" filter="url(#softGlow)">
+    <path d="M1003 111 1008 124l13 5-13 5-5 13-5-13-13-5 13-5 5-13Z"/>
+    <path d="M1085 190 1089 200l10 4-10 4-4 10-4-10-10-4 10-4 4-10Z"/>
+    <path d="M842 126 846 136l10 4-10 4-4 10-4-10-10-4 10-4 4-10Z"/>
+  </g>
+
+  <g transform="translate(70 566)">
+    <rect width="470" height="42" rx="21" fill="#ffffff" fill-opacity=".09" stroke="#ffffff" stroke-opacity=".16"/>
+    <text x="22" y="28" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" fill="#ffffff">Jordan approved · Signed with a J ✦</text>
+  </g>
+</svg>
