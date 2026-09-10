@@ -102,11 +102,21 @@
     }
   }
 
+  function loadV4(){
+    if(!document.querySelector('link[href="site-v4.css"]')){
+      const css=document.createElement('link');css.rel='stylesheet';css.href='site-v4.css';document.head.appendChild(css);
+    }
+    if(!document.querySelector('script[src="site-v4.js"]')){
+      const script=document.createElement('script');script.src='site-v4.js';script.defer=true;document.head.appendChild(script);
+    }
+  }
+
   function init(){
     enhanceHero();
     injectWhyJordan();
     simplifyConversion();
     tuneSignedButton();
+    loadV4();
   }
 
   let tries=0;
